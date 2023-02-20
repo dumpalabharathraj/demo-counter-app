@@ -46,11 +46,11 @@ pipeline{
                     nexusUrl: '54.221.145.201:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: 'https://github.com/dumpalabharathraj/demo-counter-app.git', 
+                    repository: 'demo-counter-app.git', 
                     version: '1.0.0'
                 }
             }
         }
-        }
+    }
 }
 
