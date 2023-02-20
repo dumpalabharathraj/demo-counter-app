@@ -30,5 +30,12 @@ pipeline{
                  }
              }           
             }
+            stage('Quality Gate Status'){
+                steps{
+                    scripts{
+                        waitForQualityGate abortPipeline: false, credentialsId: 'sonar-api'
+                    }
+                }
+            }
         }
 }
