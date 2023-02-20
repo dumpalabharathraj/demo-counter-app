@@ -46,7 +46,7 @@ pipeline{
                     nexusUrl: '54.221.145.201:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: 'http://54.221.145.201:8081/repository/demoapp-release/', 
+                    repository: 'demoapp-release', 
                     version: '1.0.0'
                 }
             }
