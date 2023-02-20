@@ -38,16 +38,16 @@ pipeline{
                         [
                             artifactId: 'springboot', 
                             classifier: '', file: 'target/Uber.jar', 
-                            type: 'war'
+                            type: 'jar'
                             ]
-                    ], 
-                    credentialsId: 'Nexus-auth', 
-                    groupId: 'com.example', 
-                    nexusUrl: '54.208.93.194:8081', 
-                    nexusVersion: 'nexus3', 
-                    protocol: 'http', 
-                    repository: 'http://54.208.93.194:8081/repository/maven-releases/', 
-                    version: '1.0.0'
+                            ], 
+                            credentialsId: 'nexus-auth', 
+                            groupId: 'com.example', 
+                            nexusUrl: '54.221.145.201:8081', 
+                            nexusVersion: 'nexus3', 
+                            protocol: 'http', 
+                            repository: 'https://github.com/dumpalabharathraj/demo-counter-app.git', 
+                            version: '1.0.0'
                 }
             }
         }
