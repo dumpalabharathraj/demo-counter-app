@@ -30,7 +30,7 @@ pipeline{
                  }
              }           
             }
-        stage('Uplaod war files to Nexus'){
+        stage('Uplaod jar files to Nexus'){
             steps{
                 script{
                     nexusArtifactUploader artifacts: 
@@ -39,18 +39,17 @@ pipeline{
                             artifactId: 'springboot', 
                             classifier: '', file: 'target/Uber.jar', 
                             type: 'jar'
-                            ]
+                        ]
                     ], 
                     credentialsId: 'nexus-auth', 
                     groupId: 'com.example', 
                     nexusUrl: '54.221.145.201:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: 'demo-counter-app.git', 
+                    repository: 'http://54.221.145.201:8081/repository/demoapp-release/', 
                     version: '1.0.0'
                 }
             }
         }
     }
 }
-
