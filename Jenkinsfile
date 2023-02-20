@@ -30,7 +30,7 @@ pipeline{
                  }
              }           
             }
-        stage('Uplaod jar files to Nexus'){
+        stage('Uplaod war files to Nexus'){
             steps{
                 script{
                     nexusArtifactUploader artifacts: 
@@ -40,16 +40,17 @@ pipeline{
                             classifier: '', file: 'target/Uber.jar', 
                             type: 'jar'
                             ]
-                            ], 
-                            credentialsId: 'nexus-auth', 
-                            groupId: 'com.example', 
-                            nexusUrl: '54.221.145.201:8081', 
-                            nexusVersion: 'nexus3', 
-                            protocol: 'http', 
-                            repository: 'https://github.com/dumpalabharathraj/demo-counter-app.git', 
-                            version: '1.0.0'
+                    ], 
+                    credentialsId: 'nexus-auth', 
+                    groupId: 'com.example', 
+                    nexusUrl: '54.221.145.201:8081', 
+                    nexusVersion: 'nexus3', 
+                    protocol: 'http', 
+                    repository: 'https://github.com/dumpalabharathraj/demo-counter-app.git', 
+                    version: '1.0.0'
                 }
             }
         }
         }
 }
+
